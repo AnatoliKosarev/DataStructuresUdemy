@@ -1,4 +1,4 @@
-def fibonacci(index, result_list=None):
+def fib(index, result_list=None):
     assert isinstance(index, int) and index >= 0, 'Input index must be a positive int or 0 only!'
 
     if result_list is None:
@@ -8,12 +8,26 @@ def fibonacci(index, result_list=None):
         return result_list[index]
 
     if index <= 1:
-        return result_list[index]
+        return index
 
-    result = fibonacci(index-1, result_list) + fibonacci(index-2, result_list)
+    result = fib(index-1, result_list) + fib(index-2, result_list)
     result_list.append(result)
 
     return result
 
+# def fib(num):
+#     assert isinstance(num, int) and num >= 0, 'Num must be a positive integer'
+#
+#     result_list = [0, 1]
+#
+#     if num <= 1:
+#         return num
+#
+#     for i in range(2, num + 1):
+#         result = result_list[i - 1] + result_list[i - 2]
+#         result_list.append(result)
+#
+#     return result_list[num]
 
-print(fibonacci(100))
+
+print(fib(100))
