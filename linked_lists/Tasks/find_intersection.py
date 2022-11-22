@@ -38,6 +38,7 @@ ll_b = LinkedList()
 print(ll_b.generate(8, 0, 99))
 
 add_intersection_node(ll_a, ll_b, 7)
+add_intersection_node(ll_a, ll_b, 8)
 print(ll_a)
 print(ll_b)
 
