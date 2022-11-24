@@ -55,6 +55,7 @@ class CircularLimitListQueue:
     def delete(self):
         self.start = self.top = -1
         self.items = [None] * self.limit
+        return self
 
 
 cllq = CircularLimitListQueue(3)
@@ -77,3 +78,7 @@ print(cllq.dequeue())
 print(cllq)
 print(cllq.dequeue())
 print(cllq)
+cllq.enqueue(1)
+cllq.enqueue(1)
+print(cllq)
+print(cllq.delete())
